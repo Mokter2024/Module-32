@@ -1,0 +1,77 @@
+import { createRouter, createWebHistory } from "vue-router";
+import LoginPage from "./pages/LoginPage.vue";
+import RegistrationPage from "./pages/RegistrationPage.vue";
+import DashboardPage from "./pages/DashboardPage.vue";
+import CreateTask from "./components/Tasks/CreateTask.vue";
+import NewTasks from "./components/Tasks/NewTasks.vue";
+import ProgressTasks from "./components/Tasks/ProgressTasks.vue";
+import CompletedTasks from "./components/Tasks/CompletedTasks.vue";
+import CanceledTasks from "./components/Tasks/CanceledTasks.vue";
+import EditTask from "./components/Tasks/EditTask.vue";
+import TrashedTasks from "./components/Tasks/TrashedTasks.vue";
+
+const routes = [
+  {
+    path: "/",
+    redirect: "/login",
+  },
+  {
+    path: "/login",
+    component: LoginPage,
+    name: "login",
+  },
+  {
+    path: "/register",
+    component: RegistrationPage,
+    name: "register",
+  },
+  {
+    path: "/dashboard",
+    component: DashboardPage,
+    name: "dashboard",
+    children: [
+      {
+        path: "create",
+        component: CreateTask,
+        name: "create",
+      },
+      {
+        path: "newtasks",
+        component: NewTasks,
+        name: "newtasks",
+      },
+      {
+        path: "inprogress",
+        component: ProgressTasks,
+        name: "inprogress",
+      },
+      {
+        path: "completed",
+        component: CompletedTasks,
+        name: "completed",
+      },
+      {
+        path: "cancelled",
+        component: CanceledTasks,
+        name: "cancelled",
+      },
+      {
+        path: "tasks/:id/edit",
+        name: "edittask",
+        component: EditTask,
+      },
+      {
+        path: "tasks/trashed",
+        component: TrashedTasks,
+        name: "trashed",
+      },
+    ],
+  },
+];
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+});
+
+export default router;

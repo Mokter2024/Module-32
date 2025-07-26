@@ -1,0 +1,34 @@
+Task Manager
+- Authentication
+- Task CRUD
+
+- Class 2
+Project Setup
+- Vue JS
+- axios (npm install axios)
+- vue router (npm install vue-router@4)
+- pinia (npm install pinia)
+- cogotoast (npm i cogo-toast)
+- nprogress (npm i nprogress)
+
+Authentication Implementation
+- Templating
+- Registation
+- Login
+- Logout
+
+=====================Done==============================
+
+
+M-32 - C-1
+
+- Task Templating - Done
+- Task CRUD - Create, Read, Update, Delete - Done
+- Task Filtering (New, In Progress, Completed, Cancelled) - Done
+- Trashed Tasks - Done
+- Task Soft Delete - Done
+- Task Restore - Done
+- Task Permanent Delete - Done
+
+========================Done=====================================
+
